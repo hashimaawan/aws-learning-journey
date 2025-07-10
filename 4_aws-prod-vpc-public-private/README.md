@@ -7,4 +7,11 @@ The servers run in private subnets, are launched and terminated by using an Auto
 and recieve traffic from load balancer(sending requests to mange traffic).
 Servers connect to internet using NAT gateway.
 
+![alt text](image.png)
+
 ### Let's Start the Project
+
+**Steps**
+-> Create VPC
+-> Create Ec2 instances via AutoScaling Groups
+![alt text](autoscale.png)
