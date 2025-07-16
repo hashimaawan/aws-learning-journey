@@ -5,9 +5,9 @@ Amazon S3 is an object storage service used to **store** and **retrieve** any am
 - Data (the file content)
 - Metadata (key-value pairs)
 - A unique identifier (key)
-- AWS gives 99.999..(11 9's) gurantee that object will not be deleted
-
 ---
+AWS gives 99.999..(11 9's) gurantee that object will not be deleted
+It is cost effective and also depends on the class of storage.
 
 ## Use Cases
 
@@ -54,3 +54,7 @@ Bucket Policy Example: Make Objects Public
     "Resource": "arn:aws:s3:::my-first-bucket/*"
   }]
 }
+
+```
+## Security
+S3 provides bucket policies, access control, and encryption settings are appropiately configured.
