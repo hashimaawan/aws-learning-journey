@@ -8,7 +8,7 @@ Amazon S3 is an object storage service used to **store** and **retrieve** any am
 ---
 AWS gives 99.999..(11 9's) gurantee that object will not be deleted
 It is cost effective and also depends on the class of storage.
-
+![alt text](image.png)
 ## Use Cases
 
 - Static website hosting  
