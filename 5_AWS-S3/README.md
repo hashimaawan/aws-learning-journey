@@ -58,3 +58,34 @@ Bucket Policy Example: Make Objects Public
 ```
 ## Security
 S3 provides bucket policies, access control, and encryption settings are appropiately configured.
+
+## Permissions
+Using bucket permissions you can limit access to specific buckets
+Like if you want that specific buckets don't have access to others you can set it by going
+to that bucket permissions and then edit the policy and add the policeis in form of json.
+Add statement and to exlude yourself from not having access to bucket click the Add condition and select principalARN at condition key and operator as not equals to.
+ 
+ Like this:
+```bash
+{
+  "Version": "2012-10-17",
+  "Id": "RestrictBucketToIAMUsersOnly",
+  "Statement": [
+    {
+      "Sid": "AllowOwnerOnlyAccess",
+      "Effect": "Deny",
+      "Principal": "*",
+      "Action": "s3:*",
+      "Resource": [
+        "arn:aws:s3:::your-bucket-name/*",
+        "arn:aws:s3:::your-bucket-name"
+      ],
+      "Condition": {
+        "StringNotEquals": {
+          "aws:PrincipalArn": "arn:aws:iam::AWS_ACCOUNT_ID:root"
+        }
+      }
+    }
+  ]
+}
+```
