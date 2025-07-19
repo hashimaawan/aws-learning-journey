@@ -89,3 +89,36 @@ Add statement and to exlude yourself from not having access to bucket click the 
   ]
 }
 ```
+
+## Hosting Static Website
+S3 is a very cheap solution for hositng static website as otherwise buy domain etc.
+
+Demo:
+<br>
+Goto bucket properties, go down you will find static website hosting<br>
+Enabled it. Add details like index document and save changes.<br>
+If any error come, check permissions of your bucket as you may have disbaled public access.
+<br>Simialrly you have to write the json for all obejct access
+<br>
+Like this:
+
+```bash
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": [
+                "s3:GetObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::<Bucket-Name>/*"
+            ]
+        }
+    ]
+}
+```
+
+You will also have to enable CORS in case of extensive javascript in your prject, that gets information from external APIs.
