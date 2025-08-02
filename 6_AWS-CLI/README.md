@@ -9,3 +9,5 @@ Because AWS UI is not automation friendly. Using API we can do the things progra
 - Cloud Formation
 - CDK
 
+<br>User submit commands through aws CLI which translates into API that aws understands. Terraform, CDK they all do same.
+<br>Every tool has its own usecase like CLI for quick access and terraform, CFT for large infrastructure.
