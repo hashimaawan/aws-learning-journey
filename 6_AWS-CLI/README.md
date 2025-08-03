@@ -28,3 +28,15 @@ aws --version
 Then open CLI,  you would need access key, Api tokens. To get them login to aws acount as an IAM user(recommended but for testing purpose you can use root user). then goto profile->security credentials and scroll down you will find access key. Don't share this key with anyone.
 <br>
 Once get the access key, goto terminal and write aws configure and provide the required information
+
+### Lets see some example commands
+To create an EC2 instance <br>
+aws ec2 run-instances \
+  --image-id ami-0abcdef1234567890 \
+  --count 1 \
+  --instance-type t2.micro \
+  --key-name MyKeyPair \
+  --security-groups MySecurityGroup
+
+To List EC2 isntances
+aws ec2 describe-instances
