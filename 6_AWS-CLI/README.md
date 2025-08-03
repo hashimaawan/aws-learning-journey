@@ -19,12 +19,12 @@ Because AWS UI is not automation friendly. Using API we can do the things progra
 
 ### To link account to aws CLI
 First install AWS CLI on your Operating System. 
-- macOS brew install awscli
-- cFor Linux url "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+- macOS :-  brew install awscli
+- For Linux :-  url "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 sudo ./aws/install
 aws --version
-
+- Windows :- 👉 https://awscli.amazonaws.com/AWSCLIV2.msi
 Then open CLI,  you would need access key, Api tokens. To get them login to aws acount as an IAM user(recommended but for testing purpose you can use root user). then goto profile->security credentials and scroll down you will find access key. Don't share this key with anyone.
 <br>
 Once get the access key, goto terminal and write aws configure and provide the required information
