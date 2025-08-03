@@ -38,5 +38,8 @@ aws ec2 run-instances \
   --key-name MyKeyPair \
   --security-groups MySecurityGroup
 
-To List EC2 isntances
+To List EC2 isntances<br>
 aws ec2 describe-instances
+
+
+please consult to aws documentation for specific operation commands.
