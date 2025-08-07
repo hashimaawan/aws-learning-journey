@@ -11,6 +11,9 @@ This guide covers everything you need to know to get started with **AWS CloudFor
 **AWS CloudFormation** is an Infrastructure as Code (IaC) tool that lets you define AWS resources in **YAML or JSON** templates. You can create, update, and delete entire environments using a single template.
 
 CFT act as a middleware between user and cloud and it supports Json, yaml template and is for AWS cloud only. It converts declerative and versioned template to Api call that AWS compatible.
+<br>
+CFT also provides Drift Detection, like unintentional changes happended, then you can go to CFT and there is option of detect drift.
+ 
 ---
 
 ## ✅ Prerequisites
