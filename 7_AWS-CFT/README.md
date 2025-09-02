@@ -55,4 +55,7 @@ Outputs:
     Description: EC2 Instance ID
     Value: !Ref MyEC2Instance
 
+```
 
+Resources are mandatory while other things might be optional.
+Follow this docuemntation to effectively write templates, after writing templates either you can store on local machine and import to aws console or you can also store in S3 bucket.
