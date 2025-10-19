@@ -22,3 +22,26 @@ EC2 instances are a combination of virtual processors (vCPUs), memory, network, 
 
 **Where Does Your EC2 Instance Live?**
 By default, your EC2 instances are placed in a network called the default Amazon Virtual Private Cloud (VPC). This network was created so that you can easily get started with Amazon EC2 without having to learn how to create and configure a VPC. Any resource you put inside the default VPC will be public and accessible by the internet, so you shouldn’t place any customer data or private information inside of it. Once you get more comfortable with networking on AWS, you should change this default setting to choose your own custom VPCs and restrict access with additional routing and connectivity mechanisms. 
+
+**ECS vs EKS**
+Use ECS if you just want AWS to run your Docker containers easily.
+
+Use EKS if you already use Kubernetes or need advanced control.
+
+How ECS Works (Simple)
+
+Think of ECS as the “brain” that controls your Docker containers across many EC2 servers.
+
+You create a cluster → group of EC2 servers (or use Fargate = AWS servers).
+
+Each EC2 has the ECS Agent installed → it talks to AWS ECS service.
+
+You write a Task Definition (JSON) → it tells ECS:
+
+Which Docker image to run (e.g., Nginx)
+
+How much CPU & memory to give
+
+Ports, environment variables, etc.
+
+ECS uses this to start, stop, scale, and monitor containers automatically.
